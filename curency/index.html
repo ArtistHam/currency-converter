@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currency Converter</title>
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.jpg"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Currency Converter</h1>
+        <ul class="rate">
+            <li>EUR: <span class="currencyRate"></span> </li>
+            <li>USD: <span class="currencyRate"></span> </li>
+            <li>UAH: <span class="currencyRate"></span> </li>
+            <li>RUB: <span class="currencyRate"></span> </li>
+            <li>GOLD: <span class="currencyRate"></span> </li>
+            <li>SILVER: <span class="currencyRate"></span> </li>
+        </ul>
+        <span> 
+            <a class="client_currency" href="index.html"> 
+                Your currency: ??? 
+            </a>
+        </span>
+    </header>
+
+    <main>
+
+        <div class="preload">
+            <h2>Choose your currency: </h2>
+            <select id="chooseCurrency">
+                <option value = "EUR">EUR</option>
+                <option value = "USD">USD</option>
+                <option value = "UAH">UAH</option>
+                <option value = "RUB">RUB</option>
+            </select>
+            <button onclick="getUserCurrency()">Okey</button>
+        </div>
+
+        <section class="converter">
+            <div class="row">
+                <input type="text" id="firstAmount" onkeyup="return check(this)">
+                <select id="firstCurrency">
+                    <option value = "EUR">EUR</option>
+                    <option value = "USD">USD</option>
+                    <option value = "UAH">UAH</option>
+                    <option value = "RUB">RUB</option>
+                </select>
+            </div>
+            <div class="row">
+                <input type="text" id="secondAmount" disabled>
+                <select id="secondCurrency">
+                    <option value = "EUR">EUR</option>
+                    <option value = "USD">USD</option>
+                    <option value = "UAH" selected>UAH</option>
+                    <option value = "RUB">RUB</option>
+                </select>
+            </div>
+            <button onclick="convertCurrency()">CONVERT!</button>
+        </section>
+
+
+    </main>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
